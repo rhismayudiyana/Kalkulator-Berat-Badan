@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    string gender;
+int tinggi, berat, ideal, a, b;
+
+    cout << endl;
+    cout << "  ===================================" << endl;
+    cout << "  = Nama  : Kadek Emmy Santika Dewi =" << endl;
+    cout << "  = Nim   : 2101010082              =" << endl;
+    cout << "  = Prodi : Sistem Informasi        =" << endl;
+    cout << "  ===================================" << endl;
+    cout << endl;
+    
+    cout << "         KALKULATOR BERAT BADAN" << endl;
+    cout << "" << endl;
+    cout << "  Masukan Tinggi Badan [cm] : ";
+        cin >> tinggi;
+        cout << endl;
+    cout << "  Masukan Berat Badan [kg] : ";
+        cin >>berat;
+        cout <<endl;
+    cout << "  Masukan Gender Pria/Wanita : "; 
+        cin >> gender;
+        cout << endl;
+        cout << "  ===================================" << endl;
+        
+        
+    if (gender == "Pria"){
+        ideal = ((tinggi-100)-(tinggi-100)*0.1);
+        cout << "  Berat Badan Ideal : " << ideal << endl;
+        
+        if (ideal < berat){
+        a = berat - ideal;
+            cout << "  Ayo Diet!!! Berat Badan Anda Melebihi Berat Ideal Sebesar : " << a << "kg";
+        }else if (ideal > berat){
+        b = ideal - berat;
+            cout << "  Berat Badan Anda Kurang Dari Berat Ideal Sebesar : "<< b << "kg";
+        }
+        
+    }else if (gender == "Wanita"){
+        ideal = ((tinggi-100)-(tinggi-100)*0.15);
+        cout << "  Berat Badan Ideal : "<< ideal << "kg" << endl;
+        
+        if(ideal < berat){
+        a = berat - ideal;
+            cout << "  Ayo Diet!!! Berat Badan Anda Melebihi Berat Ideal Seberas : " << a << "kg";
+        }else if(ideal > berat){
+        b = ideal - berat;
+            cout << "  Berat Badan Anda Kurang Dari Berat Ideal Sebesar : "<< b << "kg";
+        }
+    }
+    cout << endl;
+    cout << "  _____________Terimakasih___________";
+
+    return 0;
+}
